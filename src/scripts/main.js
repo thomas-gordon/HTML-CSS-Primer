@@ -7,6 +7,7 @@ var bespoke = require('bespoke'),
   backdrop = require('bespoke-backdrop'),
   scale = require('bespoke-scale'),
   voltaire = require('bespoke-theme-voltaire'),
+  hash = require('bespoke-hash'),
   progress = require('bespoke-progress');
 
 // Bespoke.js
@@ -18,6 +19,7 @@ bespoke.from('article', [
   bullets('li, .bullet'),
   backdrop(),
   scale(),
+  hash(),
   progress()
 ]);
 

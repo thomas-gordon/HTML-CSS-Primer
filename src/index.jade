@@ -27,8 +27,9 @@ html
       section(style="background-image:url(images/mind-blown.gif)")
 
       section
-        h1 Weird Acronyms!
+        h1 Purpose
         ul
+          li HTML is used in Nationbuilder, and in order to tweak it helps to know a bit about what's going on with the web code.
           li HTML?
           li CSS?
           li HTML/CSS?
@@ -46,10 +47,6 @@ html
         h2 HTML is the structure and content of the web.
         p
           img(src="images/bird-skeleton.jpeg", style="margin-top:20px;")
-
-      section
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=400&theme-id=0&default-tab=html', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=400&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 
       section
         h2 HTML Tags
@@ -84,6 +81,11 @@ html
             img(src="images/exterminate.gif", width="230", style="display:inline-block")
 
       section
+        h2 Codepen without css classes.
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=400&theme-id=0&default-tab=html', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=400&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+
+      section
         p
           img(src="images/example-nb-markup.png", style="width:100%;")
         p
@@ -109,9 +111,7 @@ html
             width="width_in_numbers" /&gt;
             buttons = &lt;button&gt;button text&lt;/button&gt;.
 
-      section
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+
 
       section
         h2 CSS
@@ -120,10 +120,71 @@ html
           li Adding the style to the skeleton.
         p
           img(src="images/bird-skeleton.jpeg", style="margin-top:20px;", width="100")
+          //todo: add two fancy birds here.
+          img(src="images/bird-skeleton.jpeg", style="margin-top:20px;", width="100")
+          //todo: add two fancy birds here.
+          img(src="images/bird-skeleton.jpeg", style="margin-top:20px;", width="100")
 
+        p.
+          Think of CSS as the visual arrangement of elements. HTML is largely for computers to read,
+          CSS is for humans to see.
 
+      section
+        h2 There are three ways of defining CSS.
 
+      section
+        h2 IDs
+        p.
+          IDs are added to a HTML tag via an attribute, and can only be used once per web page. Avoid using these for styling because of
+          this restriction.
+        //todo: embedded codepen
+        pre
+          code.language-html.
+            &lt;div id="site-header"&gt;the site's header appears only once&lt;/div&gt;
 
+      section
+        h2 Classes
+        p.
+          Classes are the most commonly used CSS designator. They can be reused multiple times per page. You can also have
+          more than one class on an element.
+        //todo: embedded codepen
+        pre
+          code.language-html.
+            &lt;div class="content-image"&gt;This div can be repeated.&lt;/div&gt;
 
+      section
+        h2 Inline
+        ul
+          li Inline styles are used to quickly add style to an HTML markup element.
+          li These can be used in the NationBuilder web content editor!
+        //todo: embedded codepen
+
+      section
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+
+      section
+        p Using provided HTML tags and data, <br>style some provided text:<br><br>
+        pre
+          code.language-css.
+            color:red;
+            font-size:22px;
+            font-weight:bold;
+            text-decoration:strike-through
+
+      section
+        h2 Wait! Bold is both HTML and CSS!
+
+      //todo: Final bird
+
+      section
+        h2 Extra resources
+        ul
+          li <a href="http://thomas-gordon.github.io/HTML-CSS-Primer">This presentation: http://thomas-gordon.github.io/HTML-CSS-Primer</a>
+          li <a href="">HTML/CSS interactive free course</a>
+          li <a href="">CSS-tricks Almanac for CSS elements</a>
+          li <a href="">HTML5 Doctor for all HTML elements</a>
+          li <a href="">Me on <a href="http://www.twitter.com/tomgwebdev">twitter!</a>
+          li <a href="">My codepen with a list of all the things I've gone over today</a>
 
     script(src='build/build.js')

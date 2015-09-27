@@ -14,7 +14,7 @@ html
       section
         h1 HTML + CSS Primer
         p
-          img(src="/images/tom-gordon.jpg")(width="100")(style="border-radius:10px")
+          img(src="/images/tom-gordon.jpg", width="100", style="border-radius:10px")
         h2 Tom Gordon, Front End Developer <br>@ <a href="http://www.squareweave.com.au">Squareweave</a>
 
       section
@@ -43,80 +43,74 @@ html
       section(style="background-image:url(/images/exterminate.gif)")
 
       section
-        h2 HTML is the structure, or the skeleton of web content.
+        h2 HTML is the structure and content of the web.
         p
-          img(src="/images/bird-skeleton.jpeg")(style="margin-top:20px;")
+          img(src="/images/bird-skeleton.jpeg", style="margin-top:20px;")
+
+      section
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=400&theme-id=0&default-tab=html', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=400&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 
       section
         h2 HTML Tags
         p Wrap text in 'tags' to denote its structure.<br><br>
-        p
-          &lt;h1&gt;The main heading on the page&lt;/h1&gt; <br>
-          &lt;p&gt;Paragraph text&lt;/p&gt; <br>
-          &lt;strong&gt;<strong>Bold, alerting text</strong>&lt;/strong&gt; <br>
-          &lt;em&gt;<em>Italic, emphasised text</em>&lt;/em&gt;
+        p.
+           &lt;h1&gt;The main heading on the page&lt;/h1&gt; <br>
+           &lt;p&gt;Paragraph text&lt;/p&gt; <br>
+           &lt;strong&gt;<strong>Bold, alerting text</strong>&lt;/strong&gt; <br>
+           &lt;em&gt;<em>Italic, emphasised text</em>&lt;/em&gt;.
 
       section
         h2 Layout tags
-          p &lt;div&gt;This is a divided piece of content&lt;/div&gt;
+        p &lt;div&gt;This is a divided piece of content&lt;/div&gt;
+        p &lt;header&gt;This is a header!&lt;/header&gt;
+        p &lt;footer&gt;This is a footer!&lt;/footer&gt;
+
+      section
+        h2 Attributes
+        ul
+          li &lt;a <strong>href="http://www.google.com"</strong>&gt;Link to google&lt;/a&gt;
+          li
+            a(href="http://www.google.com", target="_blank")
+              strong Link to google
+          li &lt;img src="http://www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg" width="100" / &gt;
+          li
+            img(src='http://www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg', width="100")
 
       section
         h2 But why is this necessary?
           p
-            img(src="/images/trash-heap.jpg")(width="200")(style="display:inline-block")
-            img(src="/images/exterminate.gif")(width="230")(style="display:inline-block")
+            img(src="/images/trash-heap.jpg", width="200", style="display:inline-block")
+            img(src="/images/exterminate.gif", width="230", style="display:inline-block")
 
       section
         p
-          img(src="/images/example-nb-markup.png")(style="width:100%;")
+          img(src="/images/example-nb-markup.png", style="width:100%;")
         p
           img(src="/images/html-button.png")
 
       section
         p
-          img(src="/images/html.png")(style="width:100%;")
+          img(src="/images/html.png", style="width:100%;")
 
       section
-        iframe(height='100%')(scrolling='no')(src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=350&theme-id=0&default-tab=html')(frameborder='no')(allowtransparency='true')(allowfullscreen='true')(style='width: 100%;')
-        iframe(height='100%')(scrolling='no')(src='//codepen.io/thomas-gordon/embed/pjNeYe/?height=200&theme-id=0&default-tab=result')(frameborder='no')(allowtransparency='true')(allowfullscreen='true')(style='width: 100%;')
-
-      section
-        p Exercise: Go to
-        section
-          h2 <div>Divided content</div>
-
-      section
-        section
-          iframe(height='100%' scrolling='no' src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
-          iframe(height='100%' scrolling='no' src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=200&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;')
-
-      section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
+        h2 Exercise:
+        p Using provided HTML tags and data, <br>markup some provided text:<br><br>
+        p
+          a(href="http://goo.gl/igvXQ0", target="_blank") http://goo.gl/igvXQ0
         pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
-
-      section.emphatic-text(data-bespoke-backdrop='emphatic')
-        h2 Emphatic Slide!
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
+          code.language-html.
+            paragraph = &lt;p&gt;Paragraph text&lt;p&gt;
+            strong/bold = &lt;strong&gt;Bold text&lt;/strong&gt;
+            emphasis/italic= &lt;em&gt;Testing&lt;/em&gt;
+            link= &lt;a href="full_link_here"&gt;LINK TEXT&lt;/a&gt;
+            headings (typically 1-6)= &lt;h1&gt;&lt;/h1&gt;
+            images= &lt;img src="image_link_here"
+              width="width_in_numbers" /&gt;
+            buttons = &lt;button&gt;button text&lt;/button&gt;.
 
       section
-        h2.bullet Just the beginning...
-        br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
-        br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 
     script(src='build/build.js')

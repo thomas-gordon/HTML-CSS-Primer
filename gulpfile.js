@@ -61,8 +61,14 @@ gulp.task('images', ['clean:images'], function() {
 });
 
 gulp.task('pdf', ['connect'], function () {
-  return pdf(pkg.name + '.pdf')
-    .pipe(gulp.dest('pdf'));
+  return pdf(
+      pkg.name + '.pdf').pipe(gulp.dest('src/pdf'),
+      'http://localhost:8080',
+      {
+        delay:20000,
+        evalDelay:500
+      }
+  );
 });
 
 gulp.task('clean', function(done) {
@@ -86,7 +92,7 @@ gulp.task('clean:images', function(done) {
 });
 
 gulp.task('clean:pdf', function(done) {
-  del('pdf/' + pkg.name + '.pdf', done);
+  del('src/pdf/' + pkg.name + '.pdf', done);
 });
 
 gulp.task('connect', ['build'], function() {

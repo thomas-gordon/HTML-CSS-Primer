@@ -27,7 +27,7 @@ html
       section(style="background-image:url(images/mind-blown.gif)")
 
       section
-        h1 Purpose
+        h2 Purpose
         ul
           li HTML is used in Nationbuilder, and in order to tweak it helps to know a bit about what's going on with the web code.
           li HTML?
@@ -41,38 +41,37 @@ html
           li Hard To Make Learn
           li Hyper Text Markup Language
 
-      section(style="background-image:url(images/exterminate.gif)")
-
       section
         h2 HTML is the structure and content of the web.
         p
           img(src="images/bird-skeleton.jpeg", style="margin-top:20px;")
 
+      section(style="background-image:url(images/exterminate.gif)")
+
       section
-        h2 HTML Tags
-        p Wrap text in 'tags' to denote its structure.<br><br>
-        p.
+        p Wrap text in 'tags' to tell the browser what it is!<br><br>
+        code.smaller.
            &lt;h1&gt;The main heading on the page&lt;/h1&gt; <br>
            &lt;p&gt;Paragraph text&lt;/p&gt; <br>
            &lt;strong&gt;<strong>Bold, alerting text</strong>&lt;/strong&gt; <br>
-           &lt;em&gt;<em>Italic, emphasised text</em>&lt;/em&gt;.
+           &lt;em&gt;Italic, emphasised text&lt;/em&gt;.
+        br
+        br
+        p
+          img(src="images/markup-result.png", style="width:400px;")
 
       section
-        h2 Layout tags
-        p &lt;div&gt;This is a divided piece of content&lt;/div&gt;
-        p &lt;header&gt;This is a header!&lt;/header&gt;
-        p &lt;footer&gt;This is a footer!&lt;/footer&gt;
+        pre
+          code.language-html.smaller &lt;a <strong>href="http://www.google.com"</strong>&gt;Link to google&lt;/a&gt;<br><br>
+        p.smaller
+          a(href="http://www.google.com", target="_blank")
+            strong Link to google
 
       section
-        h2 Attributes
-        ul
-          li &lt;a <strong>href="http://www.google.com"</strong>&gt;Link to google&lt;/a&gt;
-          li
-            a(href="http://www.google.com", target="_blank")
-              strong Link to google
-          li &lt;img src="http://www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg" width="100" / &gt;
-          li
-            img(src='http://www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg', width="100")
+        pre
+          code.language-html.smaller &lt;img src="www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg" width="100" / &gt; <br><br>
+        p.smaller
+          img(src='http://www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg', width="100")
 
       section
         h2 But why is this necessary?
@@ -117,13 +116,13 @@ html
           li Cascading Style Sheets
           li Adding the style to the skeleton.
         p
-          img(src="images/bird-skeleton.jpeg", style="margin-top:20px;", width="100")
-          img(src="images/toucan.jpeg", style="margin-top:20px;", width="100")
-          img(src="images/lahore.jpg", style="margin-top:20px;", width="100")
-
+          img(src="images/bird-skeleton.jpeg", style="margin-top:20px; vertical-align:middle", width="100")
+          img(src="images/toucan.jpeg", style="margin-top:20px;vertical-align:middle", width="170")
+          img(src="images/lahore.jpg", style="margin-top:20px;vertical-align:middle", width="140")
+        br
         p.
-          Think of CSS as the visual arrangement of elements. HTML is largely for computers to read,
-          CSS is for humans to see.
+          HTML is largely for computers and search,
+          CSS is for humans.
 
       section
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/rOWmjK/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
@@ -135,8 +134,9 @@ html
       section
         h2 IDs
         p.
-          IDs are added to a HTML tag via an attribute, and can only be used once per web page. Avoid using these for styling because of
-          this restriction.
+          IDs are used to style HTML tags when that tag is unique on the page.
+
+      section(style="background-image:url(images/id.jpg)")
 
       section
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/meOwem/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
@@ -145,27 +145,34 @@ html
       section
         h2 Classes
         p.
-          Classes are the most commonly used CSS designator. They can be reused multiple times per page. You can also have
-          more than one class on an element.
+          Classes are used to style HTML tags when that tag or block occurs multiple times on the page.
+
+      section(style="background-image:url(images/blue-men.jpg)")
 
       section
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/KdNqdG/?height=240&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/KdNqdG/?height=240&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/KdNqdG/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/KdNqdG/?height=350&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 
       section
         h2 Inline
         ul
-          li Inline styles are used to quickly add style to an HTML markup element.
+          li Inline styles are used to quickly add style to an HTML markup tag.
           li These can be used in the NationBuilder web content editor!
 
+      section(style="background-image:url(images/sugar.gif)")
+
       section
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=240&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=240&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=350&theme-id=0&default-tab=html', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+        iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=350&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 
       section
         p Using provided CSS properties, <br> use inline styles to adjust:<br><br>
         p
           a(href="http://goo.gl/tcZ2Sc", target="_blank") http://goo.gl/tcZ2Sc
+
+        pre
+          code.language-html.
+            eg. &lt;span style="font-size:22px;"&gt;This is now font size 22px&lt;span&gt;
         pre
           code.language-css.
             color:red;
@@ -179,8 +186,8 @@ html
         h2 Wait! Bold is both HTML and CSS!
         pre
           code.language-html.
-            &lt;strong&gt;the site's header appears only once&lt;/strong&gt;
-            &lt;div style="font-weight:bold"&gt;&lt;/div&gt;
+            &lt;strong&gt;Bold text!&lt;/strong&gt;
+            &lt;div style="font-weight:bold"&gt;...Bold text!&lt;/div&gt;
 
       section
         h2 Same goes for underline and strike-through.
@@ -190,6 +197,7 @@ html
         ul.smaller
           li <a href="http://www.colorpicker.com/">A colour picker for your CSS properties</a>
           li <a href="http://thomas-gordon.github.io/HTML-CSS-Primer">This presentation: http://thomas-gordon.github.io/HTML-CSS-Primer</a>
+          li <a href="http://thomas-gordon.github.io/HTML-CSS-Primer/pdf/tomgordon-html-css-primer.pdf">This presentation's slides: http://thomas-gordon.github.io/HTML-CSS-Primer/pdf/tomgordon-html-css-primer.pdf</a>
           li <a href="https://www.codecademy.com/tracks/web">HTML/CSS interactive free course</a>
           li <a href="https://css-tricks.com/almanac/">CSS-tricks Almanac for CSS properties and selectors.</a>
           li <a href="https://www.stackoverflow.com/">For all your development queries, stackoverflow.</a>

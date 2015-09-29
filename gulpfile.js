@@ -62,11 +62,10 @@ gulp.task('images', ['clean:images'], function() {
 
 gulp.task('pdf', ['connect'], function () {
   return pdf(
-      pkg.name + '.pdf').pipe(gulp.dest('src/pdf'),
+      pkg.name + '.pdf').pipe(gulp.dest('pdf'),
       'http://localhost:8080',
       {
-        delay:20000,
-        evalDelay:500
+        delay:5000
       }
   );
 });
@@ -92,7 +91,7 @@ gulp.task('clean:images', function(done) {
 });
 
 gulp.task('clean:pdf', function(done) {
-  del('src/pdf/' + pkg.name + '.pdf', done);
+  del('pdf/' + pkg.name + '.pdf', done);
 });
 
 gulp.task('connect', ['build'], function() {

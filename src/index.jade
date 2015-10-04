@@ -29,10 +29,8 @@ html
       section
         h2 Purpose
         ul
-          li HTML is used in Nationbuilder, and in order to tweak it helps to know a bit about what's going on with the web code.
-          li HTML?
-          li CSS?
-          li HTML/CSS?
+          li HTML can be edited in Nationbuilder
+          li Knowing some web code can be useful even if you don't write it.
 
       section
         h2 HTML
@@ -165,11 +163,21 @@ html
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=350&theme-id=0&default-tab=html', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=350&theme-id=0&default-tab=result', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 
+
+      section
+        h2 Wait! Bold is both HTML and CSS!
+        pre
+          code.language-html.
+            &lt;strong&gt;Bold text!&lt;/strong&gt;
+            &lt;div style="font-weight:bold"&gt;...Bold text!&lt;/div&gt;
+
+          section
+            h2 Same goes for underline and strike-through.
+
       section
         p Using provided CSS properties, <br> use inline styles to adjust:<br><br>
         p
           a(href="http://goo.gl/tcZ2Sc", target="_blank") http://goo.gl/tcZ2Sc
-
         pre
           code.language-html.
             eg. &lt;span style="font-size:22px;"&gt;This is now font size 22px&lt;span&gt;
@@ -181,16 +189,6 @@ html
             font-weight:bold;
             text-decoration:line-through;
             font-family: 'Papyrus', arial, sans-serif
-
-      section
-        h2 Wait! Bold is both HTML and CSS!
-        pre
-          code.language-html.
-            &lt;strong&gt;Bold text!&lt;/strong&gt;
-            &lt;div style="font-weight:bold"&gt;...Bold text!&lt;/div&gt;
-
-      section
-        h2 Same goes for underline and strike-through.
 
       section
         h2 Wrapping up and extra resources

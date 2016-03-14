@@ -11,6 +11,8 @@ html
 
     article
 
+      section Welcome
+
       section
         h1 HTML + CSS Primer
         h2 Tom Gordon, Front End Developer <br>@ <a href="http://www.squareweave.com.au">Squareweave</a>
@@ -22,7 +24,7 @@ html
             li To help understand technology better
             li Always moving.
 
-      section(style="background-image:url(images/mind-blown.gif)")
+      section(style="background-image:url(images/mind-blown.gif)" class="hide-export")
 
       section
         h2 Purpose
@@ -42,7 +44,7 @@ html
         p
           img(src="images/bird-skeleton.jpeg", style="margin-top:20px;")
 
-      section(style="background-image:url(images/exterminate.gif)")
+      section(style="background-image:url(images/exterminate.gif)" class="hide-export")
 
       section
         p Wrap text in 'tags' to tell the browser what it is!<br><br>
@@ -88,13 +90,17 @@ html
 
       section
         p
-          img(src="images/html.png", style="width:100%;")
+          img(src="images/html.png", style="width:100%;" )
 
       section
         h2 Exercise:
-        p Using provided HTML tags and data, <br>markup some provided text:<br><br>
         p
-          a(href="http://goo.gl/igvXQ0", target="_blank") http://goo.gl/igvXQ0
+          small Using provided HTML at below link as a starting point, turn some plain text into useful markup. <br>
+        p
+          small
+            a(href="http://goo.gl/igvXQ0", target="_blank") http://goo.gl/igvXQ0 <br>
+
+
         pre
           code.language-html.
             paragraph = &lt;p&gt;Paragraph text&lt;p&gt;
@@ -105,6 +111,12 @@ html
             images= &lt;img src="image_link_here"
             width="width_in_numbers" /&gt;
             buttons = &lt;button&gt;button text&lt;/button&gt;.
+
+        p
+          small final result should look like:
+        p
+          small
+            a(href="http://www.tomgordon.me/organiseus/1/") http://www.tomgordon.me/organiseus/1/
 
       section
         h2 CSS
@@ -132,7 +144,7 @@ html
         p.
           IDs are used to style HTML tags when that tag is unique on the page.
 
-      section(style="background-image:url(images/id.jpg)")
+      section(style="background-image:url(images/id.jpg)" class="hide-export")
 
       section
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/meOwem/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
@@ -143,7 +155,7 @@ html
         p.
           Classes are used to style HTML tags when that tag or block occurs multiple times on the page.
 
-      section(style="background-image:url(images/blue-men.jpg)")
+      section(style="background-image:url(images/blue-men.jpg)" class="hide-export")
 
       section
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/KdNqdG/?height=350&theme-id=0&default-tab=css', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
@@ -155,7 +167,7 @@ html
           li Inline styles are used to quickly add style to an HTML markup tag.
           li These can be used in the NationBuilder web content editor!
 
-      section(style="background-image:url(images/sugar.gif)")
+      section(style="background-image:url(images/sugar.gif)" class="hide-export")
 
       section
         iframe(height='100%', scrolling='no', src='//codepen.io/thomas-gordon/embed/LpbLGG/?height=350&theme-id=0&default-tab=html', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
@@ -173,12 +185,9 @@ html
             h2 Same goes for underline and strike-through.
 
       section
-        p Using provided CSS properties, <br> use inline styles to adjust:<br><br>
+        p Using provided CSS properties below use inline styles to adjust:<br><br>
         p
           a(href="http://goo.gl/tcZ2Sc", target="_blank") http://goo.gl/tcZ2Sc
-        pre
-          code.language-html.
-            eg. &lt;span style="font-size:22px;"&gt;This is now font size 22px&lt;/span&gt;
         pre
           code.language-css.
             color:red;
@@ -187,6 +196,14 @@ html
             font-weight:bold;
             text-decoration:line-through;
             font-family: 'Papyrus', arial, sans-serif
+        pre
+          code.language-html.
+            eg. &lt;span style="font-size:22px;"&gt;This is now font size 22px&lt;/span&gt;
+        p
+          small final result should look like:
+        p
+          small
+            a(href="http://www.tomgordon.me/organiseus/2/") http://www.tomgordon.me/organiseus/2/
 
       section
         h2 Wrapping up and extra resources

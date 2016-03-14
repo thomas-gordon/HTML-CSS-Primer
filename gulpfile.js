@@ -60,49 +60,47 @@ gulp.task('images', ['clean:images'], function() {
     .pipe(connect.reload());
 });
 
-gulp.task('pdf', ['connect'], function () {
-  return pdf(
-      pkg.name + '.pdf').pipe(gulp.dest('pdf'),
-      'http://localhost:8080',
-      {
-        delay:5000
-      }
-  );
-});
 
 gulp.task('clean', function(done) {
-  del('dist', done);
+  return del('dist', done);
 });
 
 gulp.task('clean:html', function(done) {
-  del('dist/index.html', done);
+  return del('dist/index.html', done);
 });
 
 gulp.task('clean:js', function(done) {
-  del('dist/build/build.js', done);
+  return del('dist/build/build.js', done);
 });
 
 gulp.task('clean:css', function(done) {
-  del('dist/build/build.css', done);
+  return del('dist/build/build.css', done);
 });
 
 gulp.task('clean:images', function(done) {
-  del('dist/images', done);
+  return del('dist/images', done);
 });
 
 gulp.task('clean:pdf', function(done) {
-  del('pdf/' + pkg.name + '.pdf', done);
+  return del('pdf/' + pkg.name + '.pdf', done);
 });
 
 gulp.task('connect', ['build'], function() {
-  connect.server({
-    root: 'dist',
-    livereload: true
+  return connect.server({
+    root: 'dist'
   });
 });
 
+gulp.task('pdf', ['connect'], function () {
+  return pdf(pkg.name + '.pdf')
+      .pipe(gulp.dest('pdf'),
+      'http://localhost:8080',
+          {delay:500, evalDelay:500});
+});
+
+
 gulp.task('open', ['connect'], function (done) {
-  opn('http://localhost:8080', done);
+  return opn('http://localhost:8080', done);
 });
 
 gulp.task('watch', function() {
@@ -116,11 +114,11 @@ gulp.task('watch', function() {
 });
 
 gulp.task('exit', ['pdf'], function () {
-  process.exit();
+  return process.exit();
 });
 
 gulp.task('deploy', ['build'], function(done) {
-  ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log }, done);
+  return ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log }, done);
 });
 
 gulp.task('build', ['js', 'html', 'css', 'images']);
